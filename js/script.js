@@ -25,7 +25,7 @@ let quotes = [
  * `getRandomQuote` function
 ***/
 
-function getRandomQuote() {
+const getRandomQuote = () =>{
   // 1. Create a variable that generates a random number
   // between zero and the last index in the `quotes` array
   let randomNumber =  Math.floor(Math.random() * quotes.length);
@@ -51,7 +51,7 @@ console.log(getRandomQuote())
 let selectHtml = document.getElementById('quote-box')
 
 
-function printQuote() {
+const printQuote = () => {
   // 1. Create a variable that calls the getRandomQuote() 
   // function
   let nextQuote = getRandomQuote()
