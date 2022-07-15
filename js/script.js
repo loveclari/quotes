@@ -19,6 +19,8 @@ let quotes = [
   {quote:"It has become appallingly obvious that our technology has exceeded our humanity.", source:" Albert Einstein"},
 ];
 
+let background = document.getElementById("quotes");
+let selectHtml = document.getElementById('quote-box')
 
 
 /***
@@ -48,15 +50,14 @@ console.log(getRandomQuote())
  * `printQuote` function
 ***/
 
-let selectHtml = document.getElementById('quote-box')
 
 
 const printQuote = () => {
   // 1. Create a variable that calls the getRandomQuote() 
   // function
-  let nextQuote = getRandomQuote()
   let html = "";
-
+  let nextQuote = getRandomQuote()
+  
   // 2. Create a variable that initiates your HTML string with 
   // the first two <p></p> elements, their classNames, 
   // and the quote and source properties, but leave off 
@@ -80,17 +81,38 @@ const printQuote = () => {
     html += `<span class="firstSpan">${nextQuote.citation}<span>`
   }
   if(nextQuote.year) {
-    html += `<span class="secondtSpan">${nextQuote.year}<span></p>`
+    html += `<span class="secondSpan">${nextQuote.year}<span></p>`
   } 
- 
-
 
   // 6. set the innerHTML of the quote-box div to equal the 
   // complete HTML string
 
   selectHtml.innerHTML = html;
+  setBackgroundColor();
 }
 
+/***
+ * change background color on click
+ */
+
+
+const getRandomValue = () => Math.floor(Math.random() * 256);
+
+const getRandomColor = () => {
+  const color = `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
+  return color;
+};
+
+const setBackgroundColor = () => {
+    const randomColor = getRandomColor();
+    background.style.backgroundColor = randomColor;
+    background.style.color = '#351c75';
+}
+ 
+setInterval(() => {
+  printQuote();
+  setBackgroundColor();
+}, 5000);
 
 
 /***
