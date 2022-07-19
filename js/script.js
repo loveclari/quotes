@@ -80,6 +80,9 @@ const printQuote = () => {
   if(nextQuote.citation) {
     html += `<span class="firstSpan">${nextQuote.citation}<span>`
   }
+  if(nextQuote.month) {
+    html += `<span class="secondSpan">${nextQuote.month}<span></p>`
+  } 
   if(nextQuote.year) {
     html += `<span class="secondSpan">${nextQuote.year}<span></p>`
   } 
