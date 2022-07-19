@@ -112,7 +112,7 @@ const setBackgroundColor = () => {
 setInterval(() => {
   printQuote();
   setBackgroundColor();
-}, 5000);
+}, 3000);
 
 
 /***
