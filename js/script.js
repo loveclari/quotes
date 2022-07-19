@@ -12,7 +12,7 @@ project 1 - A Random Quote Generator
 ***/
 
 let quotes = [
-  {quote:"History is a vast early warning system.", source:"  Norman Cousins, ", citation:" Saturday Review, ", year: " 1978"},
+  {quote:"History is a vast early warning system.", source:"  Norman Cousins, ", citation:" Saturday Review, ",month: "March", year: " 1978"},
   {quote:"Keep your face always toward the sunshine - and shadows will fall behind you.", source:"  Walt Whitman"},
   {quote:"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", source:" Buddha"},
   {quote:"You have power over your mind - not outside events. Realize this, and you will find strength.", source:" Marcus Aurelius"},
