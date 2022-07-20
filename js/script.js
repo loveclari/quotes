@@ -41,10 +41,6 @@ const getRandomQuote = () =>{
   return randomQuote;
 }
 
-console.log(getRandomQuote())
-
-
-
 
 /***
  * `printQuote` function
